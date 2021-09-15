@@ -1,0 +1,12 @@
+---
+applications:
+- name: demo
+  memory: 400M
+  path: target/btp_JavaApplicatin.jar
+  instances: 1
+  buildpacks: 
+   - sap_java_buildpack
+  env:
+   TARGET_RUNTIME: tomee7
+  routes: 
+    - route: 91ccc175trial-demo.cfapps.ap21.hana.ondemand.com 
